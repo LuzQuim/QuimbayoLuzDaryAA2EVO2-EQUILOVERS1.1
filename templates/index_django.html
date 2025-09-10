@@ -1,0 +1,389 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_corregido.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}">
+    <title>Equilovers</title>
+</head>
+<!-- Menu -->
+ <header><div class="menu">
+  <div class="logo"><a href="index.html"><img src="{% static 'img/logo.png' %}" alt=""></a></div>
+  <i class="fa fa-bars menu-icon" id="menuIcon"></i>
+  <div class="nav-buttons">
+      <a href="#home">Inicio</a>
+      <a href="#about">Quienes somos</a>
+      <a href="#services">Nuestras Instalaciones</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#contacto">Contáctanos</a>
+      <a href="{% url 'login' %}">Login</a> <!-- iNICIO DE SESION -->
+  </div>
+  <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+      <span class="close-icon" id="closeMenu">&times;</span>
+      <a href="#home">Inicio</a>
+      <a href="#about">Quienes somos</a>
+      <a href="#services">Nuestras Instalaciones</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#contacto">Contáctanos</a>
+  </div>
+</div></header>
+<body>
+    
+
+    <!-- seccion 1 -->
+    <!-- Radios para el control -->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+  <input type="radio" name="slider" id="slide4">
+
+  <div class="pasafotos" id="home">
+
+    <!-- Botones condicionales por slide -->
+    <div class="nave1">
+      <label for="slide4">&#10094;</label>
+      <label for="slide2">&#10095;</label>
+    </div>
+    <div class="nave2">
+      <label for="slide1">&#10094;</label>
+      <label for="slide3">&#10095;</label>
+    </div>
+    <div class="nave3">
+      <label for="slide2">&#10094;</label>
+      <label for="slide4">&#10095;</label>
+    </div>
+    <div class="nave4">
+        <label for="slide3">&#10094;</label>
+        <label for="slide1">&#10095;</label>
+      </div>
+
+    <!-- Slides -->
+    <div class="slides">
+      <div class="slide">
+        <img src="{% static 'img/img.1.jpg' %}" alt="Imagen 1">
+        <div class="slide-text">
+          ¿Qué esperas para hacer parte de nuestro sueño?<br>El amor es una palabra de 4 patas
+        </div>
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/img8.png' %}" alt="Imagen 2">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/img6.jpg' %}" alt="Imagen 3">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/img2.jpg' %}" alt="Imagen 4">
+      </div>
+    </div>
+  </div>
+
+
+    <!-- seccion 1.1 CIRCULOS -->
+   <!-- Círculos grandes centrados -->
+<div class="fixed-circles-center">
+    <div class="circle">
+        <div class="circle-inner">
+            <div class="front">Mejora la condición <br>física</div>
+            <div class="back">
+              <img src="{% static 'img/circulo1.jpg' %}" alt="Imagen 1">
+            </div>
+          </div>
+    </div>
+    <div class="circle">
+        <div class="circle-inner">
+            <div class="front">Aumenta la<br>coordinación<br>y el equilibrio</div>
+            <div class="back">
+              <img src="{% static 'img/circulo2.jpg' %}" alt="Imagen 2">
+            </div>
+          </div>
+    </div>
+    <div class="circle">
+        <div class="circle-inner">
+            <div class="front">Aumenta la<br>confianza y <br>el autoestima</div>
+            <div class="back">
+              <img src="{% static 'img/circulo3.jpg' %}" alt="Imagen 3">
+            </div>
+          </div>
+    </div>
+    <div class="circle">
+        <div class="circle-inner">
+            <div class="front">Reduce el<br>estrés y la<br>ansiedad</div>
+            <div class="back">
+              <img src="{% static 'img/circulo4.jpg' %}" alt="Imagen 4">
+            </div>
+          </div>
+    </div>
+  </div>
+<!-- seccion 2 -->
+<div class="two-column-section" id="about">
+    <div class="column left">
+      <h2>¿Quienes Somos?</h2>
+      <p>
+        En Equilovers creemos en el poder transformador del vínculo entre humanos y caballos. 
+        Nuestro enfoque terapéutico no solo mejora la condición física, sino que también fortalece 
+        la autoestima, reduce la ansiedad y fomenta una conexión profunda con la naturaleza.
+      </p>
+      <p>
+        Únete a nosotros y vive una experiencia única de sanación, aprendizaje y crecimiento personal.
+      </p>
+    </div>
+    <div class="column right">
+      <!-- Puedes usar imagen o video -->
+      <!-- Imagen -->
+      <img src="{% static 'img/sec3.avif' %}" alt="Imagen de Equinoterapia">
+      
+      <!-- O Video -->
+      <!--
+      <video src="video/demo.mp4" autoplay muted loop></video>
+      -->
+    </div>
+  </div>
+
+<!-- seccion 3 INSTALACIONES-->
+
+<div class="two-column-section" id="services">
+  <div class="column left">
+    <!-- Puedes usar imagen o video -->
+    <!-- Imagen -->
+    <iframe width="600" height="450" src="https://www.youtube.com/embed/C3l9KqGilb4?si=8lxU9SwCWnMNWbP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <!-- O Video -->
+    <!--
+    <video src="video/demo.mp4" autoplay muted loop></video>
+    -->
+  </div>
+  <div class="column right1">
+    <h2>Nuestras Instalacciones</h2>
+    <p>
+      En Equilovers creemos en el poder transformador del vínculo entre humanos y caballos. 
+      Nuestro enfoque terapéutico no solo mejora la condición física, sino que también fortalece 
+      la autoestima, reduce la ansiedad y fomenta una conexión profunda con la naturaleza.
+    </p>
+    <p>
+      Únete a nosotros y vive una experiencia única de sanación, aprendizaje y crecimiento personal.
+    </p>
+  </div>
+</div>
+
+
+
+<!-- seccion CARRUSEL -->
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp1.jpg' %}" alt="Logo 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp2.jpg' %}" alt="Logo 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp3.jpg' %}" alt="Logo 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp4.jpg' %}" alt="Logo 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp5.jpg' %}" alt="Logo 5">
+            </div>
+            <!-- Duplicate items for infinite scrolling effect -->
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp6.jpeg' %}" alt="Logo 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp7.jpg' %}" alt="Logo 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp8.jpg' %}" alt="Logo 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp9.jpg' %}" alt="Logo 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp1.jpg' %}" alt="Logo 5">
+            </div>
+            <!-- Duplicate items for infinite scrolling effect -->
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp2.jpg' %}" alt="Logo 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp3.jpg' %}" alt="Logo 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp4.jpg' %}" alt="Logo 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp5.jpg' %}" alt="Logo 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carrpag3/esp6.jpeg' %}" alt="Logo 5">
+            </div>
+        </div>
+    </div>
+
+ <!-- seccion 4 -->
+ <div class="seccion5-container" id="disciplinas">
+  <div class="seccion5-card">
+    <h3 class="seccion5-title">POLO</h3>
+    <div class="seccion5-inner">
+      <div class="seccion5-front">Con una rica historia que<br>
+         abarca continentes y épocas,<br>
+          el polo combina habilidad <br>
+          ecuestre, estrategia de<br>
+          equipo y velocidad.</div>
+      <div class="seccion5-back"><img src="{% static 'img/polo.jpg' %}" alt="Imagen 1"></div>
+    </div>
+  </div>
+  <div class="seccion5-card">
+    <h3 class="seccion5-title">EQUITACIÓN</h3>
+    <div class="seccion5-inner">
+      <div class="seccion5-front">Esta actividad también<br> potencia la coordinación, <br>
+        el equilibrio y la <br>
+        concentración, trabajando <br>ambos hemisferios cerebrales <br>
+        y estimulando el cuerpo<br> de manera integral.</div>
+      <div class="seccion5-back"><img src="{% static 'img/equitación.jpg' %}" alt="Imagen 2"></div>
+    </div>
+  </div>
+  <div class="seccion5-card">
+    <h3 class="seccion5-title">SALTO</h3>
+    <div class="seccion5-inner">
+      <div class="seccion5-front">Es una disciplina olímpica <br>que consiste en superar <br>
+        obstáculos con un caballo.<br> Es una de las disciplinas <br>ecuestres más emocionantes<br>
+         y espectaculares. </div>
+      <div class="seccion5-back"><img src="{% static 'img/salto.avif' %}" alt="Imagen 3"></div>
+    </div>
+  </div>
+  <div class="seccion5-card">
+    <h3 class="seccion5-title">VOULTING</h3>
+    <div class="seccion5-inner">
+      <div class="seccion5-front">Es fascinante ya que <br>fusiona la elegancia de<br>
+         la gimnasia con la<br> ejecución de movimientos<br> y ejercicios sobre un<br>
+          caballo en movimiento.</div>
+      <div class="seccion5-back"><img src="{% static 'img/voulting.jpg' %}" alt="Imagen 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- seccion 5 EVENTOS -->
+<div class="container">
+  
+  <!-- Fila 1 -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <p>Voluntariado</p>
+        <img src="{% static 'img/Voluntariado.jpg' %}" alt="Imagen 1A">
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <p>Torneo de Polo</p>
+        <img src="{% static 'img/TorneoPolo.jpg' %}" alt="Imagen 1B">
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <p>Cursos</p>
+        <img src="{% static 'img/cursos.jpeg' %}" alt="Imagen 2A">
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <p>Torneo de Salto</p>
+        <img src="{% static 'img/TorneoSal.jpg' %}" alt="Imagen 2B">
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila 3 -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <p>Fechas Especiles</p>
+        <img src="{% static 'img/cumpleaños.jpg' %}" alt="Imagen 3A">
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <p>Eventos Artísticos</p>
+        <img src="{% static 'img/Artísticos.jpeg' %}" alt="Imagen 3B">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+    <!-- seccion jb -->
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Mostrar el menú móvil
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        // Ocultar el menú móvil
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        function updateMenuVisibility() {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth <= 1070) {
+                menuIcon.style.display = 'block';
+            } else {
+                menuIcon.style.display = 'none';
+                mobileMenu.classList.remove('active');
+            }
+        }
+
+        // Ejecutar al cargar la página
+        updateMenuVisibility();
+
+        // Escuchar cambios en el tamaño de la ventana
+        window.addEventListener('resize', updateMenuVisibility);
+    </script>
+    <script>
+   // Función para incrementar los números
+    function animateCounter(id, endValue, duration, prefix = '') {
+    let startValue = 0;
+    const stepTime = Math.abs(Math.floor(duration / endValue));
+    const counter = document.getElementById(id);
+
+    const interval = setInterval(function() {
+        startValue += 1;
+        counter.textContent = prefix + startValue;
+
+        if (startValue === endValue) {
+            clearInterval(interval);
+        }
+        }, stepTime);
+    }
+
+    // Llamar a las funciones para cada número con su respectivo valor final y duración (en milisegundos)
+    window.onload = function() {
+    animateCounter("experience", 10, 2000, '+');  // Años de experiencia con "+"
+    animateCounter("projects", 755, 2000);       // Proyectos realizados
+    animateCounter("clients", 90, 2000);         // Clientes
+    };
+    </script>
+    
+</body>
+</html>

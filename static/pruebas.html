@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Solo CSS - Clase Nave</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 300vw;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-text {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      max-width: 40%;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    #slide1:checked ~ .carousel .slides {
+      transform: translateX(0);
+    }
+
+    #slide2:checked ~ .carousel .slides {
+      transform: translateX(-100vw);
+    }
+
+    #slide3:checked ~ .carousel .slides {
+      transform: translateX(-200vw);
+    }
+
+    /* Navegación personalizada */
+    .nave1, .nave2, .nave3 {
+      display: none;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .nave1 label,
+    .nave2 label,
+    .nave3 label {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 2rem;
+      padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #slide1:checked ~ .carousel .nave1,
+    #slide2:checked ~ .carousel .nave2,
+    #slide3:checked ~ .carousel .nave3 {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Radios para el control -->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
+  <div class="carousel">
+
+    <!-- Botones condicionales por slide -->
+    <div class="nave1">
+      <label for="slide3">&#10094;</label>
+      <label for="slide2">&#10095;</label>
+    </div>
+    <div class="nave2">
+      <label for="slide1">&#10094;</label>
+      <label for="slide3">&#10095;</label>
+    </div>
+    <div class="nave3">
+      <label for="slide2">&#10094;</label>
+      <label for="slide1">&#10095;</label>
+    </div>
+
+    <!-- Slides -->
+    <div class="slides">
+      <div class="slide">
+        <img src="img/img.1.jpg" alt="Imagen 1">
+        <div class="slide-text">
+          ¡Bienvenido a nuestro carrusel!<br>Disfruta de esta vista impactante.
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/img9.jpg" alt="Imagen 2">
+      </div>
+      <div class="slide">
+        <img src="img/img6.jpg" alt="Imagen 3">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
